@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/enterInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter the following" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="age"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="height"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="weight"
+            android:inputType="textWebEmailAddress" />
+
+        <EditText
+            android:id="@+id/fact1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="fact1"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/fact2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="fact2"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/fact3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="fact3"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/submitInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="update information" />
+
+        <Button
+            android:id="@+id/startChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start chatting with your new friend!" />
+
+        <Button
+            android:id="@+id/backHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Home" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

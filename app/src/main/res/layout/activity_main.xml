@@ -20,22 +20,16 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/start"
+            android:id="@+id/makeFriend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Join Game" />
+            android:text="Make a friend" />
 
         <Button
             android:id="@+id/exit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Quit" />
-
-        <Button
-            android:id="@+id/signUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign up" />
 
         <TextView
             android:id="@+id/startGame"
