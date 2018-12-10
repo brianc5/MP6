@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 public class ChatActivity extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +19,13 @@ public class ChatActivity extends AppCompatActivity {
         info.setText("name: " + FriendInfoActivity.name + "\nage: " + FriendInfoActivity.age + "\nheight: "
                 + FriendInfoActivity.height + "\nweight: " + FriendInfoActivity.weight + "\nfact1: " +
                 FriendInfoActivity.fact1 + "\nfact2: " + FriendInfoActivity.fact2 + "\nfact3: " + FriendInfoActivity.fact3);
+
+        final TextView botResponse = findViewById(R.id.botResponse);
+        final Button updateButton = findViewById(R.id.updateResponse);
+        updateButton.setOnClickListener(view -> {
+            botResponse.setText(getShit());
+        });
+
     }
 
     private void configureBackButton() {
@@ -28,5 +33,11 @@ public class ChatActivity extends AppCompatActivity {
         backButton.setOnClickListener(view -> {
             finish();
         });
+    }
+
+    private String getShit() {
+        String toReturn;
+
+        return "QQ";
     }
 }

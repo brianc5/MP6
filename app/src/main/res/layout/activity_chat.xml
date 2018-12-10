@@ -15,6 +15,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <TextView
+            android:id="@+id/botResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HI, I miss you so much" />
+
+        <Button
+            android:id="@+id/updateResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="next topic" />
+
         <Button
             android:id="@+id/goBack"
             android:layout_width="match_parent"
