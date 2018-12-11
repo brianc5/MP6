@@ -6,7 +6,26 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+import org.json.JSONObject;
+import org.json.JSONStringer;
+import org.json.*;
+
+
+
 public class ChatActivity extends AppCompatActivity {
+
+    private TextView botResponse;
+    private RequestQueue requestQueue;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +39,45 @@ public class ChatActivity extends AppCompatActivity {
                 + FriendInfoActivity.height + "\nweight: " + FriendInfoActivity.weight + "\nfact1: " +
                 FriendInfoActivity.fact1 + "\nfact2: " + FriendInfoActivity.fact2 + "\nfact3: " + FriendInfoActivity.fact3);
 
-        final TextView botResponse = findViewById(R.id.botResponse);
+
+        botResponse = findViewById(R.id.botResponse);
         final Button updateButton = findViewById(R.id.updateResponse);
+        requestQueue = Volley.newRequestQueue(this);
+        final EditText userResponse = findViewById(R.id.userResponse);
+
         updateButton.setOnClickListener(view -> {
-            botResponse.setText(getShit());
+            userResponse.getText().clear();
+            jsonParse();
         });
 
+
+    }
+
+    private void jsonParse() {
+        String url = "https://api.tronalddump.io/random/quote";
+
+        JsonObjectRequest jor = new JsonObjectRequest(
+            Request.Method.GET,
+            url,
+            null,
+            new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+                    try {
+                        String result = response.getString("value");
+                        botResponse.setText(result);
+                    } catch (Exception e) {
+
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    error.printStackTrace();
+                }
+        });
+
+        requestQueue.add(jor);
     }
 
     private void configureBackButton() {
@@ -33,11 +85,5 @@ public class ChatActivity extends AppCompatActivity {
         backButton.setOnClickListener(view -> {
             finish();
         });
-    }
-
-    private String getShit() {
-        String toReturn;
-
-        return "QQ";
     }
 }

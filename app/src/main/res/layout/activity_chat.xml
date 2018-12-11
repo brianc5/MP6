@@ -19,7 +19,16 @@
             android:id="@+id/botResponse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="30sp"
             android:text="HI, I miss you so much" />
+
+        <EditText
+            android:id="@+id/userResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="what are you thinking?"
+            android:inputType="text" />
 
         <Button
             android:id="@+id/updateResponse"
