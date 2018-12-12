@@ -19,14 +19,6 @@ public class MainActivity extends AppCompatActivity {
             finish();
         });
 
-        /*
-        final TextView tv = findViewById(R.id.startGame);
-        final Button start = findViewById(R.id.start);
-        start.setOnClickListener(v -> {
-            tv.setText("Game is about to start");
-        });
-        */
-
         configureNextButton();
 
     }

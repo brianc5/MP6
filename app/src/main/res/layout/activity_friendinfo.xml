@@ -80,6 +80,7 @@
             android:id="@+id/startChat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="5"
             android:text="Start chatting with your new friend!" />
 
         <Button

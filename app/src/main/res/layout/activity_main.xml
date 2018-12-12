@@ -23,13 +23,15 @@
             android:id="@+id/makeFriend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="10"
             android:text="Make a friend" />
 
         <Button
             android:id="@+id/exit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quit" />
+            android:layout_weight="10"
+            android:text="leave me alone" />
 
         <TextView
             android:id="@+id/startGame"

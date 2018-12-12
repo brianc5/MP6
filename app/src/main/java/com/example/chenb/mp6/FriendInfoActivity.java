@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
 
 public class FriendInfoActivity extends AppCompatActivity {
     static public String age = "";
@@ -61,6 +61,4 @@ public class FriendInfoActivity extends AppCompatActivity {
             finish();
         });
     }
-
-
 }
